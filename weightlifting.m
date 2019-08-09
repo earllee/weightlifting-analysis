@@ -19,12 +19,12 @@ firstSuccessSnatchDelta     = data(:,8);  % delta between first success and max
 % firstSuccessCleanjerkDelta  = data(:,13); % delta between first success and max
 total                       = data(:,14); % total max weight "score"
 
-dm = [sex, age, bweight, firstSnatchAttempt, firstSuccessSnatch, maxSnatch, firstAttemptSnatchDelta, firstSuccessSnatchDelta, total];
+dm = [age, bweight, firstSnatchAttempt, firstSuccessSnatch, maxSnatch, firstAttemptSnatchDelta, firstSuccessSnatchDelta, total];
 
 % plotmatrix(data)
-labels = {'sex', 'age', 'bweight', 'firstSnatchAttempt', 'firstSuccessSnatch', 'maxSnatch', 'firstAttemptSnatchDelta', 'firstSuccessSnatchDelta', 'total'};
+labels = {'age', 'bweight', 'firstSnatchAttempt', 'firstSuccessSnatch', 'maxSnatch', 'firstAttemptSnatchDelta', 'firstSuccessSnatchDelta', 'total'};
 
-% labels = {'gender', 'age', 'bweight', 'firstSnatchAttempt', 'firstSuccessSnatch', 'maxSnatch', 'firstAttemptSnatchDelta', 'firstSuccessSnatchDelta', 'firstClearnjerkAttempt', 'firstSuccessCleanjerk', 'maxCleanjerk', 'firstAttemptCleanjerkDelta', 'firstSuccessCleanjerkDelta', 'total'};
+% labels = {'gender', 'age', 'bweight', 'first\nSnatchAttempt', 'firstSuccessSnatch', 'maxSnatch', 'firstAttemptSnatchDelta', 'firstSuccessSnatchDelta', 'firstClearnjerkAttempt', 'firstSuccessCleanjerk', 'maxCleanjerk', 'firstAttemptCleanjerkDelta', 'firstSuccessCleanjerkDelta', 'total'};
 % data = [Height Weight Systolic Diastolic];
 
 [h,ax] = plotmatrix(dm);
