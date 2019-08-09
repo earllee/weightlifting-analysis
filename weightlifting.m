@@ -27,8 +27,8 @@ labels = {'gender', 'age', 'bweight', 'firstSnatchAttempt', 'firstSuccessSnatch'
 % labels = {'gender', 'age', 'bweight', 'firstSnatchAttempt', 'firstSuccessSnatch', 'maxSnatch', 'firstAttemptSnatchDelta', 'firstSuccessSnatchDelta', 'firstClearnjerkAttempt', 'firstSuccessCleanjerk', 'maxCleanjerk', 'firstAttemptCleanjerkDelta', 'firstSuccessCleanjerkDelta', 'total'};
 % data = [Height Weight Systolic Diastolic];
 
-[h,ax] = plotmatrix(data);
-for i = 1:length(data)
-  xlabel(ax(1,i), labels{i})
+[h,ax] = plotmatrix(dm);
+for i = 1:length(dm)
+  title(ax(1,i), labels{i})
   ylabel(ax(i,1), labels{i})
 end
