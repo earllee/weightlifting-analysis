@@ -23,7 +23,7 @@ total                       = data(:,14); % total max weight "score"
 
 %% Derived Metrics
 
-% Snatch to CJ ratio
+% Snatch max to CJ max ratio
 snatch_ratio = snatch_max./cj_max;
 % Sum of deltas between declared and max across both events
 total_deltas = cj_max2declared + snatch_max2declared;
@@ -35,7 +35,7 @@ dm = [age, bweight, snatch_ratio, total_deltas, total];
 labels = {...
     'age',...
     'bweight',...
-    'snatch_{max}/cj_{max}',...
+    'snatch_{ratio}',...
     'deltas_{total}',...
     'total'...
     };
@@ -84,7 +84,6 @@ title('Histogram of Residuals')
 
 % Generate residual plot for Xs 
 figure
-yhat = mdl2.Fitted;
 [~,ax] = plotmatrix([bweight, snatch_max./cj_max],r2);
 titles = {'Body Weight' 'Snatch Ratio'};
 for i = 1:length(titles)
@@ -94,6 +93,7 @@ end
 
 % Generate residual plot for output
 figure
+yhat = mdl2.Fitted;
 plotmatrix(yhat,r2)
 title('Residual Plot (y)')
 ylabel('Residuals')
